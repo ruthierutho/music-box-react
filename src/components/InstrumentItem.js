@@ -1,11 +1,10 @@
 import React from 'react';
 
-const InstrumentItem = () => {
+const InstrumentItem = ({name}) => {
 
     return (
         <>
-        <li>An Instrument!</li>
-        <li>Another Instrument</li>
+        <li>{name}</li>
         </>
     )
 }

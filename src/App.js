@@ -1,9 +1,10 @@
 import React from 'react';
+import MusicBox from './containers/MusicBox';
 
 
 function App() {
   return (
-    <h1>Music Box!</h1>
+    <MusicBox />
   );
 }
 

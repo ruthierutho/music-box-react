@@ -1,9 +1,11 @@
 import React from 'react';
 
-const GameWords = () => {
+const GameWords = ({ selectedInstrument }) => {
 
     return (
-        <h3 className="game-words">Press Play!</h3>
+        
+selectedInstrument === null ? <h3 className="game-words">Choose an <br></br>Instrument!</h3> : <h2 className="game-words">{selectedInstrument.name}!</h2>
+
     )
 
 }

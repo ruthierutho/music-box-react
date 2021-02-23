@@ -12,6 +12,10 @@ function MusicBox() {
     const [instruments, setInstruments] = useState(
         [
             {
+                id: 0,
+                name: "Oboe"
+            },
+            {
                 id: 1,
                 name: "Violin"
             },
@@ -44,7 +48,8 @@ function MusicBox() {
     );
     const [selectedInstrument, setSelectedInstrument] = useState(null);
 
-    const instrumentClick = (instrument) => {
+    const instrumentClick = (instrumentKey) => {
+        const instrument = instruments[instrumentKey];
         setSelectedInstrument(instrument);
         console.log(instrument);
     }
@@ -55,9 +60,9 @@ function MusicBox() {
             <div className="side-bar">
                 <Title ></Title>
                 <GameButton></GameButton>
-                <GameWords></GameWords>
+                <GameWords selectedInstrument={selectedInstrument}></GameWords>
             </div>
-            <InstrumentList instrumentClick={instrumentClick} selectedInstrument={selectedInstrument} instruments={instruments}></InstrumentList>
+            <InstrumentList instrumentClick={instrumentClick} instruments={instruments}></InstrumentList>
 
         </div>
     )

@@ -1,16 +1,25 @@
 import React from 'react';
+import { useState } from 'react';
 import InstrumentItem from './InstrumentItem';
 
-const InstrumentList = ({instruments}) => {
+const InstrumentList = ({instruments, selectedInstrument, instrumentClick}) => {
+
+    const [stateSelectedInstrument, setStateSelectedInstrument] = useState(null);
+  
+    const handleClick = (event) => {
+        let selectedInstrument = instruments[event.target.value];
+        setStateSelectedInstrument(selectedInstrument);
+        instrumentClick(stateSelectedInstrument);
+    }
 
     const instrumentsMapped = instruments.map(instrument => {
         return (
-            <InstrumentItem name={instrument.name} key={instrument.id}></InstrumentItem>
+            <InstrumentItem onClick={handleClick} name={instrument.name} value={instrument.id} key={instrument.id}></InstrumentItem>
         )
     })
 
     return (
-        <ul>
+        <ul className="inst-list">
             {instrumentsMapped}
         </ul>
     )

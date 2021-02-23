@@ -4,7 +4,7 @@ const Title = () => {
 
 
     return (
-        <h2>MUSIC BOX!</h2>
+        <h1 className="title">MUSIC <br></br> BOX!</h1>
     )
 
 }

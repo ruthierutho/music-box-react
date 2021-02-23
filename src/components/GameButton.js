@@ -4,7 +4,7 @@ const GameButton = () => {
 
 
     return (
-        <button>PLAY!</button>
+        <button className="game-button">PLAY!</button>
     )
 }
 

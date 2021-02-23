@@ -4,7 +4,7 @@ const InstrumentItem = ({name}) => {
 
     return (
         <>
-        <li>{name}</li>
+        <li className="instrument">{name}</li>
         </>
     )
 }

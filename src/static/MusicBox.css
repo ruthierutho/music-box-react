@@ -1,0 +1,86 @@
+body {
+    background-color: lime;
+    color: tomato;
+    font-family: 'Pangolin', cursive;
+   
+    
+}
+
+
+.music-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 80px;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.instrument {
+    background-color: yellow;
+    color: limegreen;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    font-size: 30pt;
+    list-style-type: none;
+    border-radius: 10px;
+    border: solid 5px tomato;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+.instrument:hover {
+    background: limegreen;
+    color: tomato;
+}
+
+.inst-list {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 0px 10px 60px;
+  
+}
+
+.side-bar {
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 40px; 
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.title {
+    font-size: 40pt;
+    text-align: center;
+}
+
+.game-button {
+    background-color: tomato;
+    padding: 10px;
+    border-radius: 8px;
+    color: lime;
+    font-size: 20pt;
+    font-weight: bold;
+    border: solid 2px yellow;
+    font-family: 'Pangolin', cursive;
+    text-align: center;
+
+}
+
+.game-button:hover {
+    background-color: yellow;
+    color: tomato;
+}
+
+
+.game-words{
+    font-size: 20pt;
+    text-align: center;
+}
+

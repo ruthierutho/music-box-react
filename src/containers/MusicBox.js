@@ -4,6 +4,7 @@ import Title from '../components/Title';
 import InstrumentList from '../components/InstrumentList';
 import GameButton from '../components/GameButton';
 import GameWords from '../components/GameWords';
+import '../static/MusicBox.css'
 
 
 function MusicBox() {
@@ -21,20 +22,44 @@ function MusicBox() {
             {
                 id: 3,
                 name: "Drum"
+            },
+            {
+                id: 4,
+                name: "Flute"
+            },
+            {
+                id: 5,
+                name: "Cello"
+            },
+            {
+                id: 6,
+                name: "Trumpet"
+            },
+            {
+                id: 7,
+                name: "Guitar"
             }
+
         ]
-    )
+    );
+    const [selectedInstrument, setSelectedInstrument] = useState(null);
+
+    const instrumentClick = (instrument) => {
+        setSelectedInstrument(instrument);
+        console.log(instrument);
+    }
 
 
     return (
-        <>
-        <h1>MusicBox Container</h1>
-        <Title></Title>
-        <GameButton></GameButton>
-        <GameWords></GameWords>
-        <InstrumentList instruments={instruments}></InstrumentList>
-        
-        </>
+        <div className="music-box">
+            <div className="side-bar">
+                <Title ></Title>
+                <GameButton></GameButton>
+                <GameWords></GameWords>
+            </div>
+            <InstrumentList instrumentClick={instrumentClick} selectedInstrument={selectedInstrument} instruments={instruments}></InstrumentList>
+
+        </div>
     )
 }
 

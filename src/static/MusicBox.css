@@ -1,6 +1,6 @@
 body {
-    background-color: lime;
-    color: tomato;
+    background-color: limegreen;
+    color: steelblue;
     font-family: 'Pangolin', cursive;
    
     
@@ -23,10 +23,10 @@ body {
     text-align: center;
     justify-items: center;
     justify-content: center;
-    font-size: 30pt;
+    font-size: 25pt;
     list-style-type: none;
     border-radius: 10px;
-    border: solid 5px tomato;
+    border: solid 5px steelblue;
     width: 150px;
     height: 150px;
     margin: 10px;
@@ -35,7 +35,7 @@ body {
 }
 
 .instrument:hover {
-    background: limegreen;
+    background: steelblue;
     color: tomato;
 }
 
@@ -57,15 +57,16 @@ body {
 }
 
 .title {
-    font-size: 40pt;
+    font-size: 45pt;
     text-align: center;
+    text-shadow: solid 1pt crimson;
 }
 
 .game-button {
-    background-color: tomato;
+    background-color: yellow;
     padding: 10px;
     border-radius: 8px;
-    color: lime;
+    color: tomato;
     font-size: 20pt;
     font-weight: bold;
     border: solid 2px yellow;
@@ -77,12 +78,19 @@ body {
 
 .game-button:hover {
     background-color: yellow;
-    color: tomato;
+    color: limegreen;
 }
 
 
 .game-words{
     font-size: 20pt;
     text-align: center;
+    padding: 10px 10px 10px 10px;
+    border: solid 2px tomato;
+    border-radius: 5px;
+    width: 150px;
+    height: 100px;
+    
+
 }
 

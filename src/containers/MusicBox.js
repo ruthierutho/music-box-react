@@ -42,7 +42,12 @@ function MusicBox() {
             {
                 id: 7,
                 name: "Guitar"
+            },
+            {
+                id: 7,
+                name: "Accordian"
             }
+
 
         ]
     );

@@ -44,7 +44,7 @@ function MusicBox() {
                 name: "Guitar"
             },
             {
-                id: 7,
+                id: 8,
                 name: "Accordian"
             }
 
@@ -56,7 +56,6 @@ function MusicBox() {
     const instrumentClick = (instrumentKey) => {
         const instrument = instruments[instrumentKey];
         setSelectedInstrument(instrument);
-        console.log(instrument);
     }
 
 

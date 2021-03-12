@@ -7,7 +7,6 @@ const InstrumentItem = (props) => {
 
     const handleClick = (event) => {
         props.instrumentClick(props.instKey)
-        console.log(props.instKey)
     }
 
     return (

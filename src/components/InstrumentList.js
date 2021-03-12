@@ -5,7 +5,7 @@ const InstrumentList = ({ instruments, instrumentClick }) => {
 
    
 
-    const instrumentsMapped = instruments.map(instrument => {
+    const instrumentsMapped = instruments.map((instrument, index) => {
 
 
         return (
@@ -13,7 +13,9 @@ const InstrumentList = ({ instruments, instrumentClick }) => {
             instrumentClick={instrumentClick} 
             name={instrument.name} 
             instKey={instrument.id} 
+            index={index}
             key={instrument.id}
+            image={instrument.image}
             >
             </InstrumentItem>
         )

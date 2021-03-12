@@ -5,6 +5,15 @@ import InstrumentList from '../components/InstrumentList';
 import GameButton from '../components/GameButton';
 import GameWords from '../components/GameWords';
 import '../static/MusicBox.css'
+import harp from '../static/harp.png';
+import accordion from '../static/accordion.png';
+import cello from '../static/cello.png';
+import clarinet from '../static/clarinet.png';
+import guitar from '../static/guitar.png';
+import piano from '../static/piano.png';
+import saxophone from '../static/saxophone.png';
+import drum from '../static/snare_drum.png';
+import trumpet from '../static/trumpet.png';
 
 
 function MusicBox() {
@@ -12,40 +21,49 @@ function MusicBox() {
     const [instruments, setInstruments] = useState(
         [
             {
-                id: 0,
-                name: "Oboe"
+                id : 0,
+                name: "Harp",
+                image : harp
             },
             {
                 id: 1,
-                name: "Violin"
+                name: "Saxophone",
+                image : saxophone
             },
             {
                 id: 2,
-                name: "Piano"
+                name: "Piano",
+                image : piano
             },
             {
                 id: 3,
-                name: "Drum"
+                name: "Drum",
+                image : drum
             },
             {
                 id: 4,
-                name: "Flute"
+                name: "Clarinet",
+                image : clarinet
             },
             {
                 id: 5,
-                name: "Cello"
+                name: "Cello",
+                image : cello
             },
             {
                 id: 6,
-                name: "Trumpet"
+                name: "Trumpet",
+                image : trumpet
             },
             {
                 id: 7,
-                name: "Guitar"
+                name: "Guitar",
+                image : guitar
             },
             {
                 id: 8,
-                name: "Accordian"
+                name: "Accordion",
+                image : accordion
             }
 
 
@@ -55,11 +73,12 @@ function MusicBox() {
     const [questions, setQuestions] = useState(
         [
             {id:0, question:"Find the piano!", answer:"Piano"},
-            {id:1, question:"Click the flute!", answer:"Flute"},
+            {id:1, question:"Click the clarinet!", answer:"Clarinet"},
             {id:2, question:"Can you find the cello?", answer:"Cello"},
             {id:3, question:"Where is the trumpet?", answer:"Trumpet"},
-            {id:4, question:"Find the oboe!", answer:"Oboe"},
-            {id:5, question:"Can you spot the accordian?", answer:"Accordian"}
+            {id:4, question:"Find the harp!", answer:"Harp"},
+            {id:5, question:"Can you spot the accordion?", answer:"Accordion"},
+            {id:6, question:"Where is the Saxophone?", answer:"Saxophone"}
 
         ])
     const [selectedQuestion, setSelectedQuestion] = useState(null);

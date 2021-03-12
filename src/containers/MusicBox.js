@@ -54,9 +54,13 @@ function MusicBox() {
     const [selectedInstrument, setSelectedInstrument] = useState(null);
     const [questions, setQuestions] = useState(
         [
-            {id:0, question:"Find the piano!", answer:"piano"},
-            {id:1, question:"Click the flute!", answer:"flute"},
-            {id:2, question:"Can you find the cello?", answer:"cello"}
+            {id:0, question:"Find the piano!", answer:"Piano"},
+            {id:1, question:"Click the flute!", answer:"Flute"},
+            {id:2, question:"Can you find the cello?", answer:"Cello"},
+            {id:3, question:"Where is the trumpet?", answer:"Trumpet"},
+            {id:4, question:"Find the oboe!", answer:"Oboe"},
+            {id:5, question:"Can you spot the accordian?", answer:"Accordian"}
+
         ])
     const [selectedQuestion, setSelectedQuestion] = useState(null);
 
@@ -66,6 +70,7 @@ function MusicBox() {
     }
 
     const pressPlay = () => {
+        setSelectedInstrument(null);
         const randomQ = questions[Math.floor(Math.random() * questions.length)];
         setSelectedQuestion(randomQ);
     }
@@ -78,7 +83,7 @@ function MusicBox() {
             <div className="side-bar">
                 <Title ></Title>
                 <GameButton pressPlay={pressPlay}></GameButton>
-                <GameWords selectedQuestion={selectedQuestion}></GameWords>
+                <GameWords selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument}></GameWords>
             </div>
             <InstrumentList instrumentClick={instrumentClick} instruments={instruments}></InstrumentList>
 

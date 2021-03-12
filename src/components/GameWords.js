@@ -9,7 +9,7 @@ const GameWords = ({ selectedQuestion, selectedInstrument}) => {
         : selectedQuestion !== null && selectedInstrument === null ? 
         <h2 className="game-words">{selectedQuestion.question}</h2>
         : selectedInstrument !== null && selectedInstrument.name === selectedQuestion.answer ? 
-        <h3 className="game-words">Well Done! {selectedInstrument.name} = {selectedQuestion.answer}</h3>
+        <h3 className="game-words">Well Done! You found the {selectedQuestion.answer}!</h3>
         : selectedInstrument !== null && selectedInstrument.name !== selectedQuestion.answer ?
         <h2 className="game-words"> Try Again! </h2>
         : ""

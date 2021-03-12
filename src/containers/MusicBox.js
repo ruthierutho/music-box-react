@@ -82,7 +82,7 @@ function MusicBox() {
         <div className="music-box">
             <div className="side-bar">
                 <Title ></Title>
-                <GameButton pressPlay={pressPlay}></GameButton>
+                <GameButton selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument} pressPlay={pressPlay}></GameButton>
                 <GameWords selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument}></GameWords>
             </div>
             <InstrumentList instrumentClick={instrumentClick} instruments={instruments}></InstrumentList>

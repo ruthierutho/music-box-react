@@ -2,9 +2,10 @@ import React from 'react';
 
 const GameWords = ({ selectedQuestion, selectedInstrument}) => {
 
-    const stuff = 
+    const displayWords = 
 
-        selectedQuestion === null && selectedInstrument === null ? 
+        selectedQuestion === null && selectedInstrument === null 
+        || selectedQuestion === null && selectedInstrument !== null ? 
         <h3 className="game-words">PRESS <br></br>PLAY!</h3> 
         : selectedQuestion !== null && selectedInstrument === null ? 
         <h2 className="game-words">{selectedQuestion.question}</h2>
@@ -19,7 +20,7 @@ const GameWords = ({ selectedQuestion, selectedInstrument}) => {
     return (
 
 
-        stuff
+        displayWords 
     
 
     )

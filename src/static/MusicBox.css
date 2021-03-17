@@ -60,14 +60,16 @@ body {
 }
 
 .side-bar {
-  margin: auto;
-  padding: 10px 10px 10px 40px; 
+  margin: 0px 20px 0px 0px;
+  padding: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
  
 }
 
 .title {
     font-size: 50pt;
-    text-align: left;
     text-shadow: solid 1pt crimson;
     margin: 0px 0px 15px 0px;
 }
@@ -80,7 +82,7 @@ body {
     height: 125px;
     border: solid 8px steelblue;
     cursor: pointer;
-    margin: auto;
+    margin: 0px 0px 20px 0px;
    
 
 }
@@ -108,7 +110,6 @@ body {
 
 .game-words{
     font-size: 20pt;
-    padding: 10px 10px;
     border: solid 4px tomato;
     background-color: yellow;
     color: limegreen;
@@ -119,6 +120,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: auto;
+    padding: 10px 10px 10px 10px;
     
 
 }
@@ -130,13 +133,13 @@ body {
     font-family: 'Pangolin', cursive;
     text-align: center;
     justify-content: center;
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
+    margin: 20px 0px 0px 0px;
     border: solid 4px steelblue;
     cursor: pointer;
     background-color: yellow;
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
+    box-shadow: green;
 
 }
 

@@ -4,9 +4,9 @@ const GameWords = ({ selectedQuestion, selectedInstrument, mode}) => {
 
 
     
-    const displayWordsEasy = 
+    const displayWords = 
 
-        selectedQuestion === null && selectedInstrument === null &&
+        selectedQuestion === null && selectedInstrument === null 
         || selectedQuestion === null && selectedInstrument !== null ? 
         <h3 className="game-words">PRESS <br></br>PLAY!</h3> 
         : selectedQuestion !== null && selectedInstrument === null ? 

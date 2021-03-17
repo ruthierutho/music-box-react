@@ -81,7 +81,8 @@ function MusicBox() {
             {id:4, question:"Find the harp!", answer:"Harp", mode:"easy"},
             {id:5, question:"Can you spot the accordion?", answer:"Accordion", mode:"easy"},
             {id:6, question:"Where is the Saxophone?", answer:"Saxophone", mode:"easy"},
-            {id:7, question:"Find a String instrument", answer:"String", mode:"hard"}
+            {id:7, question:"Find a String instrument!", answer:"String", mode:"hard"},
+            {id:8, question:"Which instrument is a Percussion instrument?", answer:"Drum", mode:"hard"}
         ])
     const [selectedQuestion, setSelectedQuestion] = useState(null);
     const [mode, setMode] = useState("easy");
@@ -92,10 +93,22 @@ function MusicBox() {
         setSelectedInstrument(instrument);
     }
 
+
     const pressPlay = () => {
         setSelectedInstrument(null);
-        const randomQ = questions[Math.floor(Math.random() * questions.length)];
-        setSelectedQuestion(randomQ);
+        const easyQs = [];
+        const hardQs = [];
+        questions.forEach(question => {
+            question.mode === "easy" ?
+            easyQs.push(question) :
+            hardQs.push(question)
+        });
+        const randomEasyQ = easyQs[Math.floor(Math.random() * easyQs.length)]
+        const randomHardQ= hardQs[Math.floor(Math.random() * hardQs.length)]
+        mode === "easy" ? setSelectedQuestion(randomEasyQ) 
+        : setSelectedQuestion(randomHardQ)
+
+        
     }
 
     const resetEverything = () => {

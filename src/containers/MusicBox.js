@@ -4,6 +4,8 @@ import Title from '../components/Title';
 import InstrumentList from '../components/InstrumentList';
 import GameButton from '../components/GameButton';
 import GameWords from '../components/GameWords';
+import ResetButton from '../components/ResetButton';
+import ModeToggle from '../components/ModeToggle';
 import '../static/MusicBox.css'
 import harp from '../static/harp.png';
 import accordion from '../static/accordion.png';
@@ -72,16 +74,18 @@ function MusicBox() {
     const [selectedInstrument, setSelectedInstrument] = useState(null);
     const [questions, setQuestions] = useState(
         [
-            {id:0, question:"Find the piano!", answer:"Piano"},
-            {id:1, question:"Click the clarinet!", answer:"Clarinet"},
-            {id:2, question:"Can you find the cello?", answer:"Cello"},
-            {id:3, question:"Where is the trumpet?", answer:"Trumpet"},
-            {id:4, question:"Find the harp!", answer:"Harp"},
-            {id:5, question:"Can you spot the accordion?", answer:"Accordion"},
-            {id:6, question:"Where is the Saxophone?", answer:"Saxophone"}
-
+            {id:0, question:"Find the piano!", answer:"Piano", mode:"easy"},
+            {id:1, question:"Click the clarinet!", answer:"Clarinet", mode:"easy"},
+            {id:2, question:"Can you find the cello?", answer:"Cello", mode:"easy"},
+            {id:3, question:"Where is the trumpet?", answer:"Trumpet", mode:"easy"},
+            {id:4, question:"Find the harp!", answer:"Harp", mode:"easy"},
+            {id:5, question:"Can you spot the accordion?", answer:"Accordion", mode:"easy"},
+            {id:6, question:"Where is the Saxophone?", answer:"Saxophone", mode:"easy"},
+            {id:7, question:"Find a String instrument", answer:"String", mode:"hard"}
         ])
     const [selectedQuestion, setSelectedQuestion] = useState(null);
+    const [mode, setMode] = useState("easy");
+
 
     const instrumentClick = (instrumentKey) => {
         const instrument = instruments[instrumentKey];
@@ -94,6 +98,16 @@ function MusicBox() {
         setSelectedQuestion(randomQ);
     }
 
+    const resetEverything = () => {
+        setSelectedInstrument(null);
+        setSelectedQuestion(null);
+        setMode("easy");
+    }
+
+    const modeChange = () => {
+        mode === "easy" ? setMode("hard") : setMode("easy")
+    }
+
 
 
 
@@ -103,6 +117,8 @@ function MusicBox() {
                 <Title ></Title>
                 <GameButton selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument} pressPlay={pressPlay}></GameButton>
                 <GameWords selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument}></GameWords>
+                <ResetButton resetEverything={resetEverything}></ResetButton>
+                <ModeToggle modeChange={modeChange}></ModeToggle>
             </div>
             <InstrumentList instrumentClick={instrumentClick} instruments={instruments}></InstrumentList>
 

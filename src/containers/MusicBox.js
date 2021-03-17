@@ -116,7 +116,7 @@ function MusicBox() {
             <div className="side-bar">
                 <Title ></Title>
                 <GameButton selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument} pressPlay={pressPlay}></GameButton>
-                <GameWords selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument}></GameWords>
+                <GameWords mode={mode} selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument}></GameWords>
                 <ResetButton resetEverything={resetEverything}></ResetButton>
                 <ModeToggle modeChange={modeChange}></ModeToggle>
             </div>

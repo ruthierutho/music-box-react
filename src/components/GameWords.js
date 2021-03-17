@@ -1,10 +1,12 @@
 import React from 'react';
 
-const GameWords = ({ selectedQuestion, selectedInstrument}) => {
+const GameWords = ({ selectedQuestion, selectedInstrument, mode}) => {
 
-    const displayWords = 
 
-        selectedQuestion === null && selectedInstrument === null 
+    
+    const displayWordsEasy = 
+
+        selectedQuestion === null && selectedInstrument === null &&
         || selectedQuestion === null && selectedInstrument !== null ? 
         <h3 className="game-words">PRESS <br></br>PLAY!</h3> 
         : selectedQuestion !== null && selectedInstrument === null ? 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import useSound from 'use-sound';
 import Title from '../components/Title';
 import InstrumentList from '../components/InstrumentList';
 import GameButton from '../components/GameButton';
@@ -24,7 +25,8 @@ import clarinetSound from '../static/clarinet.mp3';
 import celloSound from '../static/cello.mp3';
 import trumpetSound from '../static/trumpet.mp3';
 import guitarSound from '../static/guitar.mp3';
-import accordionSound from '../static/accordion.mp3'
+import accordionSound from '../static/accordion.mp3';
+import BopButton from '../components/BopButton';
 
 
 function MusicBox() {
@@ -104,11 +106,13 @@ function MusicBox() {
         ])
     const [selectedQuestion, setSelectedQuestion] = useState(null);
     const [mode, setMode] = useState("easy");
+    const [play, setPlay] = useSound(accordionSound);
 
 
     const instrumentClick = (instrumentKey) => {
         const instrument = instruments[instrumentKey];
         setSelectedInstrument(instrument);
+        setPlay(instrument.sound);
     }
 
 
@@ -149,9 +153,11 @@ function MusicBox() {
                 <GameButton selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument} pressPlay={pressPlay}></GameButton>
                 <GameWords mode={mode} selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument}></GameWords>
                 <ResetButton resetEverything={resetEverything}></ResetButton>
+                <BopButton></BopButton>
                 <ModeToggle modeChange={modeChange}></ModeToggle>
+                
             </div>
-            <InstrumentList instrumentClick={instrumentClick} instruments={instruments}></InstrumentList>
+            <InstrumentList selectedInstrument={selectedInstrument} instrumentClick={instrumentClick} instruments={instruments}></InstrumentList>
 
         </div>
     )

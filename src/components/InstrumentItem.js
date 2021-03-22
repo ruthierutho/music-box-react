@@ -16,7 +16,10 @@ const InstrumentItem = (props) => {
         <>
         <li onClick={handleClick} className="instrument">
             <img className="instrument-image" src={props.image} alt="icon of instrument" width="90px"/>
-            <h3 className="instrument-word">{props.name}</h3>   
+            <h3 className="instrument-word">{props.name}</h3>
+            {props.selectedInstrument !== null ?
+            <audio src="selectedInstrument.sound"></audio>
+            : ""}   
         </li>
         </>
     )

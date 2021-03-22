@@ -143,6 +143,22 @@ body {
 
 }
 
+.honk{
+    color: tomato;
+    font-size: 30pt;
+    font-weight: bold;
+    font-family: 'Pangolin', cursive;
+    text-align: center;
+    justify-content: center;
+    margin: 20px 20px 20px 20px;
+    border: solid 4px tomato;
+    cursor: pointer;
+    background-color: steelblue;
+    padding: 15px 15px 15px 15px;
+    border-radius: 15px;
+    box-shadow: green;
+}
+
 .reset:hover {
     background-color: tomato;
 }

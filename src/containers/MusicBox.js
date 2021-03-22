@@ -16,6 +16,15 @@ import piano from '../static/piano.png';
 import saxophone from '../static/saxophone.png';
 import drum from '../static/snare_drum.png';
 import trumpet from '../static/trumpet.png';
+import harpSound from '../static/harp.mp3';
+import saxophoneSound from '../static/saxophone.mp3';
+import pianoSound from '../static/piano.mp3';
+import drumSound from '../static/drum.mp3';
+import clarinetSound from '../static/clarinet.mp3';
+import celloSound from '../static/cello.mp3';
+import trumpetSound from '../static/trumpet.mp3';
+import guitarSound from '../static/guitar.mp3';
+import accordionSound from '../static/accordion.mp3'
 
 
 function MusicBox() {
@@ -23,49 +32,58 @@ function MusicBox() {
     const [instruments, setInstruments] = useState(
         [
             {
-                id : 0,
-                name: "Harp",
-                image : harp
+                "id" : 0,
+                "name": "Harp",
+                "image": harp,
+                "sound" : harpSound
             },
             {
-                id: 1,
-                name: "Saxophone",
-                image : saxophone
+                "id": 1,
+                "name": "Saxophone",
+                "image" : saxophone,
+                "sound" : saxophoneSound
             },
             {
-                id: 2,
-                name: "Piano",
-                image : piano
+                "id": 2,
+                "name": "Piano",
+                "image" : piano,
+                "sound": pianoSound,
             },
             {
-                id: 3,
-                name: "Drum",
-                image : drum
+                "id": 3,
+                "name": "Drum",
+                "image" : drum,
+                "sound": drumSound
             },
             {
-                id: 4,
-                name: "Clarinet",
-                image : clarinet
+                "id": 4,
+                "name": "Clarinet",
+                "image" : clarinet,
+                "sound": clarinetSound
             },
             {
-                id: 5,
-                name: "Cello",
-                image : cello
+                "id": 5,
+                "name": "Cello",
+                "image" : cello,
+                "sound" : celloSound
             },
             {
-                id: 6,
-                name: "Trumpet",
-                image : trumpet
+                "id": 6,
+                "name": "Trumpet",
+                "image" : trumpet,
+                "sound": trumpetSound
             },
             {
-                id: 7,
-                name: "Guitar",
-                image : guitar
+                "id": 7,
+                "name": "Guitar",
+                "image" : guitar,
+                "sound": guitarSound
             },
             {
-                id: 8,
-                name: "Accordion",
-                image : accordion
+                "id": 8,
+                "name": "Accordion",
+                "image" : accordion,
+                "sound": accordionSound
             }
 
 

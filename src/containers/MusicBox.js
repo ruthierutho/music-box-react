@@ -112,7 +112,7 @@ function MusicBox() {
     const instrumentClick = (instrumentKey) => {
         const instrument = instruments[instrumentKey];
         setSelectedInstrument(instrument);
-        setPlay(instrument.sound);
+    
     }
 
 
@@ -157,7 +157,7 @@ function MusicBox() {
                 <ModeToggle modeChange={modeChange}></ModeToggle>
                 
             </div>
-            <InstrumentList selectedInstrument={selectedInstrument} instrumentClick={instrumentClick} instruments={instruments}></InstrumentList>
+            <InstrumentList play={play} selectedInstrument={selectedInstrument} instrumentClick={instrumentClick} instruments={instruments}></InstrumentList>
 
         </div>
     )

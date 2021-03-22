@@ -144,6 +144,7 @@ body {
 }
 
 .honk{
+    display: flex;
     color: tomato;
     font-size: 30pt;
     font-weight: bold;

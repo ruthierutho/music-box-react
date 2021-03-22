@@ -4,6 +4,7 @@ body {
     font-family: 'Pangolin', cursive;
     justify-items: center;
     align-items: center;
+    padding: 0px 0px 50px 50px;
 }
 
 .music-box {

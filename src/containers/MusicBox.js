@@ -106,13 +106,18 @@ function MusicBox() {
         ])
     const [selectedQuestion, setSelectedQuestion] = useState(null);
     const [mode, setMode] = useState("easy");
-    const [play, setPlay] = useSound(accordionSound);
+    const [play] = useSound(null);
+ 
 
 
     const instrumentClick = (instrumentKey) => {
         const instrument = instruments[instrumentKey];
-        setSelectedInstrument(instrument);
-    
+        
+        return new Promise((resolve, reject) => {
+            setSelectedInstrument(instrument);
+        })
+        .then(play(instrument.sound))
+
     }
 
 
@@ -154,10 +159,10 @@ function MusicBox() {
                 <GameWords mode={mode} selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument}></GameWords>
                 <ResetButton resetEverything={resetEverything}></ResetButton>
                 <BopButton></BopButton>
-                <ModeToggle modeChange={modeChange}></ModeToggle>
+                {/* <ModeToggle modeChange={modeChange}></ModeToggle> */}
                 
             </div>
-            <InstrumentList play={play} selectedInstrument={selectedInstrument} instrumentClick={instrumentClick} instruments={instruments}></InstrumentList>
+            <InstrumentList selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument} instrumentClick={instrumentClick} instruments={instruments}></InstrumentList>
 
         </div>
     )

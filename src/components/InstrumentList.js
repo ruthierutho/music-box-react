@@ -1,7 +1,7 @@
 import React from 'react';
 import InstrumentItem from './InstrumentItem';
 
-const InstrumentList = ({ instruments, instrumentClick, selectedInstrument, play }) => {
+const InstrumentList = ({ instruments, instrumentClick, selectedInstrument, selectedQuestion }) => {
 
    
 
@@ -12,6 +12,7 @@ const InstrumentList = ({ instruments, instrumentClick, selectedInstrument, play
             <InstrumentItem 
             instrumentClick={instrumentClick} 
             selectedInstrument={selectedInstrument}
+            selectedQuestion={selectedQuestion}
             name={instrument.name} 
             instKey={instrument.id} 
             index={index}

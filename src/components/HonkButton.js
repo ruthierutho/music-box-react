@@ -3,10 +3,10 @@ import useSound from 'use-sound';
 
 import honk from '../static/wrong_answer.mp3'
 
-const BopButton = () => {
+const HonkButton = () => {
     const [play] = useSound(honk);
 
-    return <button className="honk" onClick={play}>HONK</button>
+    return <button className="honk" onClick={play}>HONK!</button>
 }
 
-export default BopButton;
+export default HonkButton;

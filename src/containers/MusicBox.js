@@ -26,7 +26,7 @@ import celloSound from '../static/cello.mp3';
 import trumpetSound from '../static/trumpet.mp3';
 import guitarSound from '../static/guitar.mp3';
 import accordionSound from '../static/accordion.mp3';
-import BopButton from '../components/BopButton';
+import HonkButton from '../components/HonkButton';
 
 
 function MusicBox() {
@@ -158,7 +158,7 @@ function MusicBox() {
                 <GameButton selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument} pressPlay={pressPlay}></GameButton>
                 <GameWords mode={mode} selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument}></GameWords>
                 <ResetButton resetEverything={resetEverything}></ResetButton>
-                <BopButton></BopButton>
+                <HonkButton></HonkButton>
                 {/* <ModeToggle modeChange={modeChange}></ModeToggle> */}
                 
             </div>

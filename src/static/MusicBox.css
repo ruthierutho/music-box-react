@@ -32,6 +32,7 @@ body {
     margin: 10px;
     padding: 10px 10px 10px 10px;
     cursor: pointer;
+    box-shadow: 5px 10px 5px tomato;
 }
 
 .instrument:hover {
@@ -84,6 +85,7 @@ body {
     border: solid 8px steelblue;
     cursor: pointer;
     margin: 0px 0px 20px 0px;
+    box-shadow: 5px 5px 5px tomato;
    
 
 }
@@ -111,7 +113,7 @@ body {
 
 .game-words{
     font-size: 20pt;
-    border: solid 4px tomato;
+    border: solid 4px steelblue;
     background-color: yellow;
     color: limegreen;
     border-radius: 5px;

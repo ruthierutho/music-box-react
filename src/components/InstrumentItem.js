@@ -11,7 +11,7 @@ const InstrumentItem = (props) => {
 
     const handleClick = (event) => {
         props.instrumentClick(props.instKey)
-        play(props.sound)
+        play(props.sound, { playbackRate: 5.0 })
        
     }
 

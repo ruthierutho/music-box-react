@@ -27,6 +27,7 @@ import trumpetSound from '../static/trumpet.mp3';
 import guitarSound from '../static/guitar.mp3';
 import accordionSound from '../static/accordion.mp3';
 import HonkButton from '../components/HonkButton';
+import Footer from '../components/Footer';
 
 
 function MusicBox() {
@@ -107,6 +108,7 @@ function MusicBox() {
     const [selectedQuestion, setSelectedQuestion] = useState(null);
     const [mode, setMode] = useState("easy");
     const [play] = useSound(null);
+
  
 
 
@@ -163,7 +165,9 @@ function MusicBox() {
                 
             </div>
             <InstrumentList selectedQuestion={selectedQuestion} selectedInstrument={selectedInstrument} instrumentClick={instrumentClick} instruments={instruments}></InstrumentList>
-
+            <div>
+            <Footer></Footer>
+            </div>
         </div>
     )
 }

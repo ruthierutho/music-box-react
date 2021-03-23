@@ -4,18 +4,19 @@ body {
     font-family: 'Pangolin', 'Comic Sans', sans-serif;
     justify-items: center;
     align-items: center;
-    padding: 0px 0px 50px 0px;
+    padding: auto;
 }
 
 .music-box {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 50px;
+    padding: 4% 0% 0% 0%;
+    margin: auto;
     justify-items: center;
     justify-content: center;
     align-content: center;
-    width: 95%
+    width: 90%
 }
 
 .instrument {
@@ -54,16 +55,16 @@ body {
 }
 
 .inst-list {
-    width: 60%;
+    width: 62%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 10px 0px 10px 40px;
+    padding: 10px 0px 10px 20px;
   
 }
 
 .side-bar {
-  margin: 0px 20px 0px 0px;
+  margin: auto;
   padding: auto;
   justify-content: center;
   align-items: center;
@@ -175,6 +176,19 @@ body {
     background-color: tomato;
     border: solid 8x steelblue;
 
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    
+}
+
+.github-link {
+    text-decoration: none;
+    padding: 0px 0px;
+    margin: 22px 0px;
 }
 
 

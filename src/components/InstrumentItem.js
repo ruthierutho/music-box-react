@@ -6,12 +6,13 @@ import honk from '../static/wrong_answer.mp3'
 
 const InstrumentItem = (props) => {
 
-    const [play] = useSound(props.sound);
-    const [play2] = useSound(honk)
+    const [play] = useSound(props.sound, { playbackRate: 1.75, volume: 1 });
+    const [play2] = useSound(honk, { playbackRate: 1.5, volume: 1 } )
+    
 
     const handleClick = (event) => {
         props.instrumentClick(props.instKey)
-        play(props.sound, { playbackRate: 5.0 })
+        play(props.sound)
        
     }
 
